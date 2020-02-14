@@ -32,7 +32,7 @@ function generateDash(city){
     console.log(response);
     var icon = setIcon(response.weather[0].main);
     $("#dash").empty();
-    $("#dash").append("<h2>" + city + " " + "("+ current.getMonth() + "/" + current.getDate() + "/" + current.getFullYear() + ")" + " " +icon+ "</h2>")
+    $("#dash").append("<h2>" + city + " " + "("+ (current.getMonth() + 1) + "/" + current.getDate() + "/" + current.getFullYear() + ")" + " " +icon+ "</h2>")
     $("#dash").append("<p> Temperature: " + response.main.temp + " &#8457");
     $("#dash").append("<p> Humidity: " + response.main.humidity + "&#37; </p>");
     $("#dash").append("<p> Wind Speed: " + response.wind.speed + " MPH</p>");
