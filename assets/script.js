@@ -1,4 +1,6 @@
 
+var APIkey = "2a459ebf1649c4965d63c31cfc93309d"
+
 $(".btn").click(function(){
   toList();
   console.log(typeof $("#citySearch").val());
@@ -12,7 +14,7 @@ function toList(){
 
 function generateForecast(){
   var city = $("#citySearch").val();
-  var URL = "api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=2a459ebf1649c4965d63c31cfc93309d";
+  var URL = "api.openweathermap.org/data/2.5/forecast?q=" + city + ",US&appid=" + APIkey;
   $.ajax({
     url: URL,
     method: "GET"
