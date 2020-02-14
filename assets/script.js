@@ -1,7 +1,5 @@
 
 $(".btn").click(function(){
-  console.log("Hi!");
-  console.log($("#citySearch").val());
   toList();
 //   generateDash();
   generateForecast();
