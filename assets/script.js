@@ -1,6 +1,7 @@
 
 $(".btn").click(function(){
   toList();
+  console.log(typeof $("#citySearch").val());
 //   generateDash();
   generateForecast();
 });
