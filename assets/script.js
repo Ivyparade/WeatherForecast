@@ -12,7 +12,8 @@ function toList(){
 };
 
 function generateForecast(){
-  var URL = "api.openweathermap.org/data/2.5/forecast?q=" + $("#citySearch").val() + "&appid=2a459ebf1649c4965d63c31cfc93309d";
+  var city = $("#citySearch").val();
+  var URL = "api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=2a459ebf1649c4965d63c31cfc93309d";
   $.ajax({
     url: URL,
     method: "GET"
