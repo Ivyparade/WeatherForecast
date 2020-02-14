@@ -14,13 +14,11 @@ function toList(){
 
 function generateForecast(){
   var city = $("#citySearch").val();
-  var URL = "api.openweathermap.org/data/2.5/forecast?q=" + city + ",US&appid=" + APIkey;
+  var URL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + ",US&appid=" + APIkey;
   $.ajax({
     url: URL,
     method: "GET"
   }).then(function(response) {
-    response.forEach(function(){
-      console.log(response);
-    });
+    console.log(response);
   });
 };
