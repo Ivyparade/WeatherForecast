@@ -11,6 +11,7 @@ $(".btn").click(function(){
 
 $("#cityList").click(function(event){
   var city = event.target.innerText;
+  generateDash(city);
   generateForecast(city);
 })
 
