@@ -34,7 +34,7 @@ function generateDash(city){
     $("#dash").empty();
     $("#dash").append("<h2>" + city + " " + "("+ current.getMonth() + "/" + current.getDate() + "/" + current.getFullYear() + ")" + " " +icon+ "</h2>")
     $("#dash").append("<p> Temperature: " + response.main.temp + " &#8457");
-    $("#dash").append("<p> Humidity: " + response.main + "&#37; </p>");
+    $("#dash").append("<p> Humidity: " + response.main.humidity + "&#37; </p>");
     $("#dash").append("<p> Wind Speed: " + response.wind.speed + " MPH</p>");
     $("#dash").append("<p id='UVindex'> UV index: </p>");
     var url = "https://api.openweathermap.org/data/2.5/uvi?lat="+ response.coord.lat +"&lon=" + response.coord.lon + "&appid=" + APIkey;
